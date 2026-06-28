@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D2D2D"/>
+      <stop offset="100%" stop-color="#9C4A6C"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#g)"/>
+  <g transform="translate(400 390)" fill="none" stroke="#D4B548" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-120" y="-40" width="240" height="180" rx="14" fill="#3a2e32" stroke="#D4B548"/>
+    <rect x="-120" y="-90" width="240" height="60" rx="10" fill="#5C2A40" stroke="#D4B548"/>
+    <line x1="0" y1="-90" x2="0" y2="140"/>
+    <path d="M-30 -90 C -30 -130, 30 -130, 30 -90" />
+  </g>
+  <text x="400" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#E2CC7C">Beauty Bundles</text>
+</svg>

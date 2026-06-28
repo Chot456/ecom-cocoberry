@@ -1,0 +1,16 @@
+{
+  "name": "Cocoberry | Naturally Radiant, Beautifully You",
+  "short_name": "Cocoberry",
+  "description": "Premium beauty essentials inspired by coconut and berries.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9f6",
+  "theme_color": "#d981a3",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
