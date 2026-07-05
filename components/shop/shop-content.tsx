@@ -5,6 +5,7 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { SlidersHorizontal, X } from "lucide-react";
 import { useProducts } from "@/lib/hooks/use-products";
 import { ProductGrid, ProductGridSkeleton } from "@/components/product/product-grid";
+import { SearchInput } from "@/components/shop/search-input";
 import { CategoryFilter } from "@/components/shop/category-filter";
 import { PriceFilter } from "@/components/shop/price-filter";
 import { SortSelect } from "@/components/shop/sort-select";
@@ -73,6 +74,7 @@ export function ShopContent() {
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[220px_1fr]">
         <aside className="hidden lg:block">
           <div className="sticky top-24 space-y-8">
+            <SearchInput value={query} onSearch={(value) => updateParams({ q: value || undefined })} />
             <CategoryFilter selected={categorySlug} onChange={(slug) => updateParams({ category: slug })} />
             <PriceFilter
               minPrice={minPrice}
@@ -133,6 +135,7 @@ export function ShopContent() {
               </button>
             </div>
             <div className="space-y-8">
+              <SearchInput value={query} onSearch={(value) => updateParams({ q: value || undefined })} />
               <CategoryFilter selected={categorySlug} onChange={(slug) => updateParams({ category: slug })} />
               <PriceFilter
                 minPrice={minPrice}

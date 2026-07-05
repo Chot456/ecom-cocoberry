@@ -7,14 +7,6 @@ import { useProfile } from "@/lib/hooks/use-profile";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 
-const CATEGORY_LINKS = [
-  { name: "Skincare", slug: "skincare" },
-  { name: "Makeup", slug: "makeup" },
-  { name: "Hair Care", slug: "hair-care" },
-  { name: "Body Care", slug: "body-care" },
-  { name: "Beauty Bundles", slug: "beauty-bundles" },
-];
-
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { user } = useUser();
   const { data: profile } = useProfile(user?.id);
@@ -39,20 +31,6 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
         </Link>
         <Link href="/about" onClick={onClose} className="py-3 text-charcoal dark:text-beige border-b border-rose-100 dark:border-white/10">
           About
-        </Link>
-        <p className="pt-4 pb-1 text-xs uppercase tracking-wider text-charcoal/40">Categories</p>
-        {CATEGORY_LINKS.map((c) => (
-          <Link
-            key={c.slug}
-            href={`/categories/${c.slug}`}
-            onClick={onClose}
-            className="py-3 text-charcoal dark:text-beige border-b border-rose-100 dark:border-white/10"
-          >
-            {c.name}
-          </Link>
-        ))}
-        <Link href="/wishlist" onClick={onClose} className="py-3 text-charcoal dark:text-beige border-b border-rose-100 dark:border-white/10">
-          Wishlist
         </Link>
         {user ? (
           <>
